@@ -4,25 +4,25 @@
       "title": "New Battle Map: Desert Storm",
       "date": "2024-03-15",
       "content": "Experience intense tank warfare in our new desert map featuring dynamic sandstorms and strategic high ground positions.",
-      "image": "/images/battle-1.jpg"
+      "image": "images/battle-1.jpg"
     },
     {
       "title": "Winter Warfare Event",
       "date": "2024-03-10",
       "content": "Special winter-themed battles with snow-covered terrain and unique winter camouflage options for your tanks.",
-      "image": "/images/battle-2.jpg"
+      "image": "images/battle-2.jpg"
     },
     {
       "title": "Community Tournament Results",
       "date": "2024-03-05",
       "content": "Congratulations to Team Thunder for winning the March Community Tournament! Check out the highlights and statistics.",
-      "image": "/images/battle-3.jpg"
+      "image": "images/battle-3.jpg"
     },
     {
       "title": "New Tank Line: Modern Era",
       "date": "2024-02-28",
       "content": "Introducing the latest generation of main battle tanks with advanced technology and improved combat capabilities.",
-      "image": "/images/battle-4.jpg"
+      "image": "images/battle-4.jpg"
     }
   ]
 }
