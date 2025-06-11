@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Battle Log - Tank Master</title>
+    <meta
+      name="description"
+      content="Stay updated with the latest battle updates and game improvements in Tank Master. Track new maps, events, and tank line updates."
+    />
+    <title>Battle Log - Tank Master | Domain.com</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -61,9 +65,14 @@
           .map(
             (update) => `
                 <article class="update-card">
-                    <h3>${update.title}</h3>
-                    <p class="update-date">${update.date}</p>
-                    <p>${update.content}</p>
+                    <div class="update-image">
+                        <img src="${update.image}" alt="${update.title}">
+                    </div>
+                    <div class="update-content">
+                        <h3>${update.title}</h3>
+                        <p class="update-date">${update.date}</p>
+                        <p>${update.content}</p>
+                    </div>
                 </article>
             `
           )
@@ -75,9 +84,11 @@
           .map(
             (update) => `
                 <article class="update-item">
-                    <h3>${update.title}</h3>
-                    <p class="update-date">${update.date}</p>
-                    <p>${update.content}</p>
+                    <div class="update-content">
+                        <h3>${update.title}</h3>
+                        <p class="update-date">${update.date}</p>
+                        <p>${update.content}</p>
+                    </div>
                 </article>
             `
           )

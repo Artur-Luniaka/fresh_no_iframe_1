@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tank Master - Epic Tank Warfare Game</title>
+    <meta
+      name="description"
+      content="Experience the ultimate tank warfare simulation in Tank Master. Engage in epic battles, customize your tanks, and dominate the battlefield with advanced military equipment."
+    />
+    <title>Tank Master - Epic Tank Warfare Game | Domain.com</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -37,7 +41,7 @@
       <!-- How to Play Section -->
       <section id="how-to-play" class="how-to-play">
         <div class="container">
-          <h2>How to Play</h2>
+          <h2>How Shoot</h2>
           <div class="gameplay-content" id="gameplay-content">
             <!-- Content will be loaded from JSON -->
           </div>
@@ -78,8 +82,36 @@
     <!-- Footer will be loaded dynamically -->
     <div id="footer"></div>
 
+    <!-- Cookie Bar -->
+    <div class="cookie-bar" id="cookieBar">
+      <div class="cookie-bar-content">
+        We use cookies to enhance your experience. By continuing to visit this
+        site you agree to our use of cookies.
+        <a href="tank-cookies.html">Cookie Notice</a>
+      </div>
+      <div class="cookie-bar-buttons">
+        <button class="btn" id="acceptCookies">Accept</button>
+      </div>
+    </div>
+
     <script src="js/main.js"></script>
     <script>
+      // Cookie bar functionality
+      document.addEventListener("DOMContentLoaded", () => {
+        const cookieBar = document.getElementById("cookieBar");
+        const acceptButton = document.getElementById("acceptCookies");
+
+        // Show cookie bar after a short delay
+        setTimeout(() => {
+          cookieBar.classList.add("visible");
+        }, 1000);
+
+        // Handle accept button click
+        acceptButton.addEventListener("click", () => {
+          cookieBar.classList.remove("visible");
+        });
+      });
+
       // Load content from JSON files
       document.addEventListener("DOMContentLoaded", async () => {
         const featuresData = await loadJSONData("data/features.json");

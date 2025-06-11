@@ -3,22 +3,26 @@
     {
       "title": "Version 2.1.0 Released",
       "date": "2024-03-20",
-      "content": "Major update featuring improved graphics, new sound effects, and enhanced tank physics. Also includes various bug fixes and performance improvements."
+      "content": "Major update featuring improved graphics, new sound effects, and enhanced tank physics. Also includes various bug fixes and performance improvements.",
+      "image": "images/news/version-update.jpg"
     },
     {
       "title": "Matchmaking Improvements",
       "date": "2024-03-15",
-      "content": "Updated matchmaking system for better team balance and reduced waiting times. New skill-based ranking system implemented."
+      "content": "Updated matchmaking system for better team balance and reduced waiting times. New skill-based ranking system implemented.",
+      "image": "images/news/matchmaking.jpg"
     },
     {
       "title": "UI Overhaul",
       "date": "2024-03-10",
-      "content": "Complete redesign of the user interface for better usability and modern look. New customization options for HUD elements."
+      "content": "Complete redesign of the user interface for better usability and modern look. New customization options for HUD elements.",
+      "image": "images/news/ui-update.jpg"
     },
     {
       "title": "Server Maintenance",
       "date": "2024-03-05",
-      "content": "Scheduled maintenance completed. Server infrastructure upgraded for better performance and stability."
+      "content": "Scheduled maintenance completed. Server infrastructure upgraded for better performance and stability.",
+      "image": "images/news/server-update.jpg"
     }
   ]
 }

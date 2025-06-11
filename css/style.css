@@ -123,6 +123,13 @@ a:hover {
   padding: var(--spacing-md) 0;
 }
 
+/* Add padding to main content to prevent header overlap */
+main {
+  padding-top: calc(
+    var(--spacing-xl) + 60px
+  ); /* Header height + extra padding */
+}
+
 /* Mobile Menu */
 .mobile-menu {
   display: none;
@@ -135,6 +142,12 @@ a:hover {
 
   .nav-desktop {
     display: none;
+  }
+
+  main {
+    padding-top: calc(
+      var(--spacing-lg) + 50px
+    ); /* Smaller padding for mobile */
   }
 }
 
@@ -212,6 +225,10 @@ a:hover {
   height: auto;
   display: block;
   object-fit: cover;
+  max-width: 600px;
+  max-height: 500px;
+  margin: 0 auto;
+  border-radius: 12px;
 }
 
 @media (max-width: 768px) {
@@ -226,6 +243,11 @@ a:hover {
   .hero-image {
     margin-top: var(--spacing-lg);
   }
+
+  .hero-image img {
+    max-width: 450px;
+    max-height: 350px;
+  }
 }
 
 @media (max-width: 360px) {
@@ -235,6 +257,11 @@ a:hover {
 
   .hero p {
     font-size: 1rem;
+  }
+
+  .hero-image img {
+    max-width: 346px;
+    max-height: 230px;
   }
 }
 
@@ -386,21 +413,82 @@ a:hover {
 }
 
 .update-card {
-  padding: var(--spacing-lg);
   background-color: var(--color-primary);
   border-radius: 8px;
+  padding: var(--spacing-md);
   transition: var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  border: 1px solid var(--color-border);
 }
 
 .update-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.update-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.update-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-base);
+}
+
+.update-card:hover .update-image img {
+  transform: scale(1.05);
+}
+
+.update-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
 }
 
 .update-date {
   color: var(--color-text-secondary);
   font-size: 0.9rem;
-  margin-bottom: var(--spacing-sm);
+}
+
+.update-item {
+  background-color: var(--color-primary);
+  border-radius: 8px;
+  padding: var(--spacing-md);
+  transition: var(--transition-base);
+  display: flex;
+  gap: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  margin-bottom: var(--spacing-md);
+}
+
+.update-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.update-item .update-image {
+  width: 200px;
+  height: 150px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .update-item {
+    flex-direction: column;
+  }
+
+  .update-item .update-image {
+    width: 100%;
+    height: 200px;
+  }
 }
 
 /* Contact Section */
@@ -462,31 +550,6 @@ a:hover {
 .form-group textarea {
   min-height: 150px;
   resize: vertical;
-}
-
-/* Policy Pages */
-.policy {
-  padding: var(--spacing-xl) 0;
-  background-color: var(--color-background);
-}
-
-.policy-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.policy-content h2 {
-  margin-top: var(--spacing-xl);
-  color: var(--color-accent);
-}
-
-.policy-content ul {
-  margin: var(--spacing-md) 0;
-  padding-left: var(--spacing-lg);
-}
-
-.policy-content li {
-  margin-bottom: var(--spacing-sm);
 }
 
 /* Mobile Menu Styles */
@@ -761,4 +824,130 @@ a:hover {
   display: block;
   font-size: 2.5rem;
   margin-bottom: var(--spacing-md);
+}
+
+/* Disclaimer Page */
+.disclaimer {
+  padding: var(--spacing-xl) 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../images/hero-tank.jpg") center/cover no-repeat;
+  min-height: calc(100vh - 60px);
+}
+
+.disclaimer h1 {
+  color: var(--color-accent);
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.disclaimer h1::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: var(--color-secondary);
+}
+
+.disclaimer-content {
+  background-color: rgba(44, 62, 80, 0.9);
+  border-radius: 8px;
+  padding: var(--spacing-xl);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--color-border);
+}
+
+.disclaimer h2 {
+  color: var(--color-accent);
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
+  font-size: 1.5rem;
+}
+
+.disclaimer h2:first-of-type {
+  margin-top: 0;
+}
+
+.disclaimer p {
+  color: var(--color-text);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+  .disclaimer {
+    padding: var(--spacing-lg) 0;
+  }
+
+  .disclaimer-content {
+    padding: var(--spacing-lg);
+  }
+
+  .disclaimer h1 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .disclaimer h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Cookie Bar */
+.cookie-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-primary);
+  padding: var(--spacing-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+  z-index: 1000;
+  border-top: 1px solid var(--color-border);
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.cookie-bar.visible {
+  transform: translateY(0);
+}
+
+.cookie-bar-content {
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
+
+.cookie-bar-content a {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.cookie-bar-buttons {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.cookie-bar .btn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .cookie-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cookie-bar-buttons {
+    width: 100%;
+    justify-content: center;
+  }
 }
