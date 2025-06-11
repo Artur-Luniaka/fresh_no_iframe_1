@@ -1,0 +1,24 @@
+{
+  "equipment": [
+    {
+      "name": "Main Battle Tanks",
+      "description": "Versatile tanks with balanced armor, firepower, and mobility. Perfect for various combat situations."
+    },
+    {
+      "name": "Light Tanks",
+      "description": "Fast and agile vehicles ideal for reconnaissance and hit-and-run tactics."
+    },
+    {
+      "name": "Heavy Tanks",
+      "description": "Powerful armored vehicles with devastating firepower, but slower movement speed."
+    },
+    {
+      "name": "Tank Destroyers",
+      "description": "Specialized vehicles with powerful anti-tank weapons and enhanced camouflage."
+    },
+    {
+      "name": "Self-Propelled Artillery",
+      "description": "Long-range support vehicles capable of delivering devastating indirect fire."
+    }
+  ]
+}

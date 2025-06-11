@@ -1,0 +1,24 @@
+{
+  "modes": [
+    {
+      "title": "Team Deathmatch",
+      "description": "Classic team-based combat where the team with the most eliminations wins. Perfect for quick, action-packed battles."
+    },
+    {
+      "title": "Capture the Flag",
+      "description": "Strategic mode where teams must capture the enemy's flag while defending their own. Requires perfect coordination."
+    },
+    {
+      "title": "Strategic Warfare",
+      "description": "Large-scale battles with multiple objectives. Control key points on the map to secure victory."
+    },
+    {
+      "title": "Survival Mode",
+      "description": "Face waves of increasingly difficult AI opponents. Last as long as possible with limited resources."
+    },
+    {
+      "title": "Historical Battles",
+      "description": "Recreate famous tank battles from history with period-accurate vehicles and maps."
+    }
+  ]
+}

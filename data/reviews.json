@@ -1,0 +1,40 @@
+{
+  "reviews": [
+    {
+      "author": "Alex Thompson",
+      "role": "Professional Gamer",
+      "rating": 5,
+      "text": "The most realistic tank simulation I've ever played. The attention to detail is incredible!"
+    },
+    {
+      "author": "Sarah Chen",
+      "role": "Game Developer",
+      "rating": 5,
+      "text": "As a developer, I'm impressed by the game's optimization and smooth gameplay."
+    },
+    {
+      "author": "Mike Johnson",
+      "role": "Military Enthusiast",
+      "rating": 4,
+      "text": "Great historical accuracy and authentic tank mechanics. Could use more historical campaigns."
+    },
+    {
+      "author": "Emma Wilson",
+      "role": "Casual Player",
+      "rating": 4,
+      "text": "Easy to learn, hard to master. Perfect balance for both casual and hardcore players."
+    },
+    {
+      "author": "David Lee",
+      "role": "Esports Player",
+      "rating": 5,
+      "text": "The competitive scene is thriving. Amazing balance between different tank types."
+    },
+    {
+      "author": "Lisa Brown",
+      "role": "Gaming Journalist",
+      "rating": 5,
+      "text": "A masterpiece in military simulation. The graphics and sound design are top-notch."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "steps": [
+    {
+      "title": "Basic Controls",
+      "description": "Master the essential controls: WASD for movement, mouse for aiming, and left click to fire. Use spacebar for emergency brake and shift for boost."
+    },
+    {
+      "title": "Tank Selection",
+      "description": "Choose your tank based on your playstyle. Light tanks are fast but fragile, heavy tanks are slow but powerful, and medium tanks offer balanced performance."
+    },
+    {
+      "title": "Combat Mechanics",
+      "description": "Learn to aim for weak spots, manage your ammunition, and use terrain for cover. Remember to repair your tank when damaged."
+    },
+    {
+      "title": "Team Strategy",
+      "description": "Coordinate with your team, assign roles, and develop tactics. Communication is key to victory in team battles."
+    },
+    {
+      "title": "Resource Management",
+      "description": "Manage your resources wisely. Collect ammo and repair kits from supply points, and use your boost power strategically."
+    }
+  ]
+}

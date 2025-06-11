@@ -1,0 +1,28 @@
+{
+  "features": [
+    {
+      "title": "Realistic Tank Physics",
+      "description": "Experience authentic tank movement and combat mechanics with our advanced physics engine."
+    },
+    {
+      "title": "Multiple Battle Modes",
+      "description": "Choose from various game modes including Team Deathmatch, Capture the Flag, and Strategic Warfare."
+    },
+    {
+      "title": "Extensive Tank Arsenal",
+      "description": "Unlock and upgrade over 50 historically accurate tanks from different eras and nations."
+    },
+    {
+      "title": "Dynamic Weather System",
+      "description": "Battle through changing weather conditions that affect visibility and terrain."
+    },
+    {
+      "title": "Team-Based Combat",
+      "description": "Coordinate with your team using advanced communication tools and tactical planning."
+    },
+    {
+      "title": "Progressive Customization",
+      "description": "Customize your tanks with unique camos, decals, and performance upgrades."
+    }
+  ]
+}

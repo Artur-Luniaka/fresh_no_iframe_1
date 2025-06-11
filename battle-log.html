@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Battle Log - Tank Master</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header will be loaded dynamically -->
+    <div id="header"></div>
+
+    <main>
+      <!-- Battle Updates Section -->
+      <section class="battle-updates">
+        <div class="container">
+          <h1>Battle Log</h1>
+          <div class="updates-grid" id="updates-content">
+            <!-- Content will be loaded from JSON -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Game Updates Section -->
+      <section class="game-updates">
+        <div class="container">
+          <h2>Game Updates</h2>
+          <div class="updates-list" id="game-updates-content">
+            <!-- Content will be loaded from JSON -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer will be loaded dynamically -->
+    <div id="footer"></div>
+
+    <script src="js/main.js"></script>
+    <script>
+      // Load content from JSON files
+      document.addEventListener("DOMContentLoaded", async () => {
+        const battleUpdatesData = await loadJSONData(
+          "data/battle-updates.json"
+        );
+        const gameUpdatesData = await loadJSONData("data/game-updates.json");
+
+        // Render content
+        if (battleUpdatesData) {
+          document.getElementById("updates-content").innerHTML =
+            renderBattleUpdates(battleUpdatesData);
+        }
+        if (gameUpdatesData) {
+          document.getElementById("game-updates-content").innerHTML =
+            renderGameUpdates(gameUpdatesData);
+        }
+      });
+
+      // Content rendering functions
+      function renderBattleUpdates(data) {
+        return data.updates
+          .map(
+            (update) => `
+                <article class="update-card">
+                    <h3>${update.title}</h3>
+                    <p class="update-date">${update.date}</p>
+                    <p>${update.content}</p>
+                </article>
+            `
+          )
+          .join("");
+      }
+
+      function renderGameUpdates(data) {
+        return data.updates
+          .map(
+            (update) => `
+                <article class="update-item">
+                    <h3>${update.title}</h3>
+                    <p class="update-date">${update.date}</p>
+                    <p>${update.content}</p>
+                </article>
+            `
+          )
+          .join("");
+      }
+    </script>
+  </body>
+</html>
