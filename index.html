@@ -7,7 +7,7 @@
       name="description"
       content="Experience the ultimate tank warfare simulation in Tank Master. Engage in epic battles, customize your tanks, and dominate the battlefield with advanced military equipment."
     />
-    <title>Tank Master - Epic Tank Battles</title>
+    <title>Tank Master - Epic Tank Battles | Domain.com</title>
     <link rel="icon" type="image/png" href="images/favicon.ico" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -42,7 +42,7 @@
       <!-- How to Play Section -->
       <section id="how-to-play" class="how-to-play">
         <div class="container">
-          <h2>How Shoot</h2>
+          <h2>How Manage</h2>
           <div class="gameplay-content" id="gameplay-content">
             <!-- Content will be loaded from JSON -->
           </div>
@@ -102,14 +102,21 @@
         const cookieBar = document.getElementById("cookieBar");
         const acceptButton = document.getElementById("acceptCookies");
 
-        // Show cookie bar after a short delay
-        setTimeout(() => {
-          cookieBar.classList.add("visible");
-        }, 1000);
+        // Check if user has already accepted cookies
+        const cookiesAccepted = localStorage.getItem("cookiesAccepted");
+
+        if (!cookiesAccepted) {
+          // Show cookie bar after a short delay
+          setTimeout(() => {
+            cookieBar.classList.add("visible");
+          }, 1000);
+        }
 
         // Handle accept button click
         acceptButton.addEventListener("click", () => {
           cookieBar.classList.remove("visible");
+          // Save acceptance in localStorage
+          localStorage.setItem("cookiesAccepted", "true");
         });
       });
 
